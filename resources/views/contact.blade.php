@@ -7,9 +7,7 @@
 @section('content')
     <h4 class="card-title">{{ $contact->name }}</h4>
     <h6 class="card-subtitle mb-2 text-muted">
-        @if($contact->tag != 'None' && $contact->tag != 'none')
         <i>{{ $contact->tag }}</i>
-        @endif
     </h6>
 
     @if($contact->phoneNumbers->isEmpty())

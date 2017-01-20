@@ -23,9 +23,7 @@ class ContactsController extends Controller
         $contact = new Contact();
         $contact->name = request()->name;
         $contact->user_id = Auth::id();
-        if (!empty($contact->group)) {
-            $contact->group = request()->group;
-        }
+        $contact->tag = request()->tag;
         $contact->save();
         Session::flash('status', 'The contact has been successfully created!');
         return redirect()->route('contact', [$contact]);
