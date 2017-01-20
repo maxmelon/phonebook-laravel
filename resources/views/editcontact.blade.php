@@ -32,7 +32,7 @@
                         <input type="text" class="form-control form-control-lg" id="{{ $phoneNumber->id }}-number" name="{{ $phoneNumber->id }}-number" value="{{ $phoneNumber->number }}">
                     </div>
                     <div class="col-1 ml-auto my-auto">
-                        <a href="#" class="card-link close" data-toggle="modal" data-target="#deleteModal" style="color: #ce8483">
+                        <a href="/number/{{ $phoneNumber->id }}/delete" class="card-link close" style="color: #ce8483">
                             <span aria-hidden="true">&times;</span>
                         </a>
                     </div>

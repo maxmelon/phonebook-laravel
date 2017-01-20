@@ -84,4 +84,13 @@ class ContactsController extends Controller
         return redirect()->route('contact', [$contact]);
     }
 
+    public function deleteNumber(PhoneNumber $number)
+    {
+        $number = PhoneNumber::find($number->id);
+        $contact = Contact::find($number->contact_id);
+        $number->forceDelete();
+        Session::flash('status', ' The selected phone number has been successfully deleted');
+        return redirect()->route('contact', [$contact]);
+    }
+
 }
