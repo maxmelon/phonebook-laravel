@@ -35,6 +35,10 @@ class HomeController extends Controller
 
     public function start()
     {
-        return view('start');
+        if (Auth::check()) {
+            return redirect()->route('home');
+        } else {
+            return view('start');
+        }
     }
 }
