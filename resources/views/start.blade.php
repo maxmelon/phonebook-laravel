@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('title')
+    Phone Book: Welcome
+@stop
+
 @section('content')
     <div class="row">
         <div class="col text-center">
